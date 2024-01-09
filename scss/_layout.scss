@@ -1,10 +1,10 @@
 .container__grid{
     display:grid;
     grid-template-areas: 
-    "hea  head head head"
-    "hea  mai mai mai"
-    "hea  mai mai mai"
-    "hea  foo foo foo"
+    " head head head"
+    "  mai mai mai"
+    " mai mai mai"
+    "  foo foo foo"
     ;
 }
 
