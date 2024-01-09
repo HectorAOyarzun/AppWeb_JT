@@ -1,0 +1,38 @@
+*{
+    @include reset;
+}
+html{
+    @include html;
+}
+body{
+    @include body;
+}
+main{
+    @include main;
+}
+
+html{
+ scroll-behavior:smooth;
+}
+
+.modal-dialog{
+    max-width: 80%;
+}
+.aside{
+    display: flex;
+    width: 100%;
+    &__title{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        color:white;
+        &:hover{
+            color:gray;
+        }
+        svg{
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 20px;
+        }
+    }
+}

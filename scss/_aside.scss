@@ -1,0 +1,16 @@
+.aside__reflexion{
+    display: flex;
+    width: 240px;
+    flex-direction: column;
+    &__title{
+        display: flex;
+        h7{
+            color:blue;
+            text-align: center;
+
+            font-size: 18px;
+        }
+    }
+}
+
+
