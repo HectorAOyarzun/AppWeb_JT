@@ -16,18 +16,18 @@ const bd_juego = [
   },
   {
     id:'C',
-    pregunta:"Espacios... ?",
-    respuesta:"confinados"
+    pregunta:"Son espasmos muscululares dolorosos que suelen darse en las piernas ?",
+    respuesta:"calambres"
   },
   {
     id:'D',
-    pregunta:"Es la solución que debo aplicar ante un contacto con sustancias químicas - comienza con D",
-    respuesta:"diphoterine"
+    pregunta:"Suele darse cuando las personas han permanecido de pie durante largos periodos de tiempo en sitios calurosos",
+    respuesta:"desmayo"
   },
   {
     id:'E',
-    pregunta:"Tarea crítica - comienza con E",
-    respuesta:"excavacion"
+    pregunta:"Efecto del calor en el organismo",
+    respuesta:"estres"
   },
   {
     id:'F',
@@ -51,9 +51,10 @@ const bd_juego = [
   },
   {
     id:'J',
-    pregunta:"Lenguaje de programación con el cual se diseño el sistema operativo Android",
-    respuesta:"java"
+    pregunta:"Organismo que proporciona informacion sobre alertas de Altas temperaturas - comienza con S",
+    respuesta:"sernapred"
   },
+ 
 ]
 
 //preguntas que ya han sido contestadas. Si estan en 0 no han sido contestadas
