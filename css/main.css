@@ -111,7 +111,6 @@ html {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #008989;
   padding: 20px;
   color: white;
 }
@@ -123,7 +122,6 @@ html {
   flex-direction: column;
   width: 100%;
   text-align: center;
-  background-color: #008989;
 }
 .ruleta__charla {
   display: flex;
