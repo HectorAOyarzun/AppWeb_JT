@@ -70,6 +70,28 @@ const timer = document.getElementById("tiempo");
 let timeLeft = TIEMPO_DEL_JUEGO;
 var countdown;
 
+  const responderBtn = document.getElementById("responder");
+  responderBtn.addEventListener("click", function(event) {
+    const txtRespuesta = document.getElementById("respuesta").value.toLowerCase();
+    controlarRespuesta(txtRespuesta);
+  });
+
+  function controlarRespuesta(txtRespuesta) {
+    if (txtRespuesta === bd_juego[numPreguntaActual].respuesta.toLowerCase()) {
+      cantidadAcertadas++;
+      estadoPreguntas[numPreguntaActual] = 1;
+      document.getElementById(bd_juego[numPreguntaActual].id).classList.remove("pregunta-actual");
+      document.getElementById(bd_juego[numPreguntaActual].id).classList.add("bien-respondida");
+    } else {
+      estadoPreguntas[numPreguntaActual] = 1;
+      document.getElementById(bd_juego[numPreguntaActual].id).classList.remove("pregunta-actual");
+      document.getElementById(bd_juego[numPreguntaActual].id).classList.add("mal-respondida");
+    }
+    document.getElementById("respuesta").value = "";
+    cargarPregunta();
+  }
+
+
 //boton comenzar
 var comenzar = document.getElementById("comenzar");
 comenzar.addEventListener("click", function(event) {
@@ -96,33 +118,33 @@ for (let i = 1; i <= TOTAL_PREGUNTAS; i++) {
 }
 
 
+
+
 //Función que carga la pregunta
-function cargarPregunta(){
-  numPreguntaActual++;
-  //controlo si he llegado al final de las preguntas, para comenzar de nuevo
-  if(numPreguntaActual>=TOTAL_PREGUNTAS){
-    numPreguntaActual=0;
-  }
-
-  if(estadoPreguntas.indexOf(0)>=0){ //Controlo que todavía hallan preguntas por contestar
-    while(estadoPreguntas[numPreguntaActual]==1){
-      numPreguntaActual++;
-      if(numPreguntaActual>=TOTAL_PREGUNTAS){
-        numPreguntaActual=0;
-      }
+  function cargarPregunta() {
+    numPreguntaActual++;
+    if (numPreguntaActual >= TOTAL_PREGUNTAS) {
+      numPreguntaActual = 0;
     }
-  
-    document.getElementById("letra-pregunta").textContent = bd_juego[numPreguntaActual].id
-    document.getElementById("pregunta").textContent = bd_juego[numPreguntaActual].pregunta
-    var letra =  bd_juego[numPreguntaActual].id;
-    document.getElementById(letra).classList.add("pregunta-actual");
-  }
-  else{
-    clearInterval(countdown);
-    mostrarPantallaFinal();
+
+    if (estadoPreguntas.indexOf(0) >= 0) {
+      while (estadoPreguntas[numPreguntaActual] === 1) {
+        numPreguntaActual++;
+        if (numPreguntaActual >= TOTAL_PREGUNTAS) {
+          numPreguntaActual = 0;
+        }
+      }
+
+      document.getElementById("letra-pregunta").textContent = bd_juego[numPreguntaActual].id;
+      document.getElementById("pregunta").textContent = bd_juego[numPreguntaActual].pregunta;
+      const letra = bd_juego[numPreguntaActual].id;
+      document.getElementById(letra).classList.add("pregunta-actual");
+    } else {
+      clearInterval(countdown);
+      mostrarPantallaFinal();
+    }
   }
 
-}
 
 //detecto cada vez que hay un cambio de tecla en el input
 var respuesta = document.getElementById("respuesta");
