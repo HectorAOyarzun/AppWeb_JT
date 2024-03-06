@@ -1,4 +1,4 @@
-var options = ["MMC", "EPP", "Equipo", "Evacuación", "Extintores", "A. Trayecto", "Peligro", "Herramientas", "Accidentes", "Incidentes", "Conducción"];
+var options = ["Desarme atomizador", "EPP", "Equipo", "Evacuación", "Extintores", "A. Trayecto", "Peligro", "Herramientas", "Accidentes", "Incidentes", "Conducción"];
 
 var startAngle = 0;
 var arc = Math.PI / (options.length / 2);
@@ -31,7 +31,7 @@ function getColor(item, maxitem) {
   green = Math.sin(frequency*item+0+phase) * width + center;
   blue  = Math.sin(frequency*item+4+phase) * width + center;
   
-  return RGB2Color(red,blue,green);
+  return RGB2Color(red,blue,red);
 }
 
 function drawRouletteWheel() {
@@ -66,11 +66,26 @@ function drawRouletteWheel() {
       ctx.shadowBlur    = 0;
       ctx.shadowColor   = "rgb(67,65,65)";
       ctx.fillStyle = "black";
-      ctx.translate(250 + Math.cos(angle + arc / 2) * textRadius, 
-                    250 + Math.sin(angle + arc / 2) * textRadius);
-      ctx.rotate(angle + arc / 2 + Math.PI / 2);
+      
       var text = options[i];
-      ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
+      if (text.length > 10) {
+        var splitText = text.split(' ');
+        var halfIndex = Math.ceil(splitText.length / 2);
+        var firstLine = splitText.slice(0, halfIndex).join(' ');
+        var secondLine = splitText.slice(halfIndex).join(' ');
+        
+        ctx.translate(250 + Math.cos(angle + arc / 2) * textRadius, 
+                      250 + Math.sin(angle + arc / 2) * textRadius);
+        ctx.rotate(angle + arc / 2 + Math.PI / 2);
+        ctx.fillText(firstLine, -ctx.measureText(firstLine).width / 2, -5);
+        ctx.fillText(secondLine, -ctx.measureText(secondLine).width / 2, 10);
+      } else {
+        ctx.translate(250 + Math.cos(angle + arc / 2) * textRadius, 
+                      250 + Math.sin(angle + arc / 2) * textRadius);
+        ctx.rotate(angle + arc / 2 + Math.PI / 2);
+        ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
+      }
+      
       ctx.restore();
     } 
 
@@ -113,10 +128,34 @@ function stopRotateWheel() {
   var degrees = startAngle * 180 / Math.PI + 90;
   var arcd = arc * 180 / Math.PI;
   var index = Math.floor((360 - degrees % 360) / arcd);
+  var selectedOption = options[index];
+
+  // Definir opciones relacionadas para cada opción
+  var relatedOptions = {
+    "Desarme atomizador": ["EPP Empleados", "hola", "Espuma"],
+    "EPP": ["Opción A", "Opción B"],
+    "Equipo": ["Equipo 1", "Equipo 2", "Equipo 3"],
+    "Evacuación": ["Lugar 1", "Lugar 2", "Lugar 3"],
+    "Extintores": ["PQS", "Agua", "Espuma"],
+    "A. Trayecto": ["PQS", "Agua", "Espuma"],
+    "Peligro": ["PQS", "Agua", "Espuma"],
+    "Herramientas": ["PQS", "Agua", "Espuma"],
+   
+    // Agregar opciones relacionadas para el resto de las opciones
+  };
+
+    // Obtener las opciones relacionadas para la opción seleccionada
+  var relatedOptionsText = relatedOptions[selectedOption] || ["No hay opciones relacionadas"];
+
   ctx.save();
-  ctx.font = 'bold 30px Helvetica, Arial';
-  var text = options[index]
-  ctx.fillText(text, 250 - ctx.measureText(text).width / 2, 250 + 10);
+  ctx.font = 'bold 20px Helvetica, Arial';
+  ctx.fillText(selectedOption, 250 - ctx.measureText(selectedOption).width / 2, 250 + 10);
+
+  // Mostrar opciones relacionadas en el centro
+  ctx.font = 'bold 12px Helvetica, Arial';
+  for (var i = 0; i < relatedOptionsText.length; i++) {
+    ctx.fillText(relatedOptionsText[i], 250 - ctx.measureText(relatedOptionsText[i]).width / 2, 250 + 30 + i * 20);
+  }
   ctx.restore();
 }
 

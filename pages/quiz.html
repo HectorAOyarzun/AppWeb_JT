@@ -6,15 +6,95 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
     crossorigin="anonymous">
-       <link rel="stylesheet" href="./css/main.css"> 
+       <link rel="stylesheet" href="../css/main.css"> 
     <title>Document</title>
 </head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("../assets/quiz.JPG");
+  }
+  
+  h1 {
+    margin-top: 50px;
+    color:white;
+    text-shadow: 1px 1px 10px #131313;
+  }
+  #question{
+    color:white;
+    text-shadow: 1px 1px 10px #131313;
+  }
+
+  #quiz-container {
+    margin-top: 50px;
+  }
+  
+  #question-container {
+    margin-bottom: 20px;
+  }
+  
+  #options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    background-color: #ff6c58;
+    color: white;
+    font-weight: 500;
+    box-shadow: 1px 1px 5px 1px #bdb7b7;
+    border-radius: 30px;
+  }
+  .option:hover{
+    background-color:rgb(206, 31, 142);
+  }
+  .option:focus{
+    background-color:rgb(25, 54, 240);
+  }
+  
+  #submit-btn {
+    padding: 10px 20px;
+    background-color: brown;
+    color:white;
+  }
+  @keyframes anim_title{
+    0% {color: #ff0;} 
+   25% {color: rgb(255, 0, 162);} 
+   50% {color: #085db1;} 
+   75% {color: #f80;} 
+  100% {color: #ff0;} 
+}
+h1 {
+  animation-name: anim_title;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+  @keyframes anim_submit{
+    0% {background-color: rgb(70, 70, 0);} 
+   25% {background-color: rgb(255, 0, 162);} 
+   50% {background-color: #085db1;} 
+   75% {background-color: #f80;} 
+  100% {background-color: rgb(255, 0, 191);} 
+}
+#submit-btn {
+  animation-name: anim_submit;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+</style>
 <body>
 <div class="container__grid">
    <nav class="navbar navbar-dark bg-dark fixed-top" id="header-navbar">
   <div class="container-fluid">
    
-    <img src="./assets/Soprole_2016.svg" width="60px" alt="Soprole">
+    <img src="../assets/Soprole_2016.svg" width="60px" alt="Soprole">
    
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,13 +103,13 @@
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
           
-         <img src="./assets/Soprole_2016.svg" width="60px" alt="Soprole">
+         <img src="../assets/Soprole_2016.svg" width="60px" alt="Soprole">
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         
               <section class="aside">
-                <a class="aside__title" href="#"> 
+                <a class="aside__title" href="../index.html"> 
                 <article class="aside__title">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
                         <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
@@ -38,19 +118,9 @@
             </article></a>
             </section>
 
-            <section class="aside">
-                <a class="aside__title" href="./pages/dados.html"> 
-                <article class="aside__title">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dice-4" viewBox="0 0 16 16">
-  <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3z"/>
-  <path d="M5.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
-</svg>
-                <h5>Dados</h5>
-            </article></a>
-            </section>
-      
+
               <section class="aside">
-                <a class="aside__title" href="./pages/ruleta.html"> 
+                <a class="aside__title" href="ruleta.html"> 
                  <article class="aside__title">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
   <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
@@ -59,27 +129,39 @@
                  <h5>Ruleta</h5>
              </article></a>
              </section>
-            <!--    <section class="aside">
-                <a class="aside__title" href="./pages/ahorcado.html"> 
+            <section class="aside">
+                <a class="aside__title" href="./dados.html"> 
+                <article class="aside__title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dice-4" viewBox="0 0 16 16">
+  <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3z"/>
+  <path d="M5.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+</svg>
+                <h5>Dados</h5>
+            </article></a>
+            </section>
+         
+              
+             <!--   <section class="aside">
+                <a class="aside__title" href="./ahorcado.html"> 
                  <article class="aside__title">
                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-dpad-fill" viewBox="0 0 16 16">
                      <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zm1.288 2.34a.25.25 0 0 1 .424 0l.799 1.278A.25.25 0 0 1 8.799 4H7.201a.25.25 0 0 1-.212-.382l.799-1.279Zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12H8.8a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0Zm-4.17-4.65-1.279-.798a.25.25 0 0 1 0-.424l1.279-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.382.212Zm10.043-.798-1.278.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z"/>
                  </svg>
                  <h5>Ahorcado</h5>
              </article></a>
-             </section> -->
-                   <section class="aside">
-                <a class="aside__title" href="./pages/adivina.html"> 
+             </section> --> 
+                 <section class="aside">
+                <a class="aside__title" href="./adivina.html"> 
                  <article class="aside__title">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alphabet-uppercase" viewBox="0 0 16 16">
-  <path d="M1.226 10.88H0l2.056-6.26h1.42l2.047 6.26h-1.29l-.48-1.61H1.707l-.48 1.61ZM2.76 5.818h-.054l-.75 2.532H3.51zm3.217 5.062V4.62h2.56c1.09 0 1.808.582 1.808 1.54 0 .762-.444 1.22-1.05 1.372v.055c.736.074 1.365.587 1.365 1.528 0 1.119-.89 1.766-2.133 1.766zM7.18 5.55v1.675h.8c.812 0 1.171-.308 1.171-.853 0-.51-.328-.822-.898-.822zm0 2.537V9.95h.903c.951 0 1.342-.312 1.342-.909 0-.591-.382-.954-1.095-.954zm5.089-.711v.775c0 1.156.49 1.803 1.347 1.803.705 0 1.163-.454 1.212-1.096H16v.12C15.942 10.173 14.95 11 13.607 11c-1.648 0-2.573-1.073-2.573-2.849v-.78c0-1.775.934-2.871 2.573-2.871 1.347 0 2.34.849 2.393 2.087v.115h-1.172c-.05-.665-.516-1.156-1.212-1.156-.849 0-1.347.67-1.347 1.83"/>
-</svg>
-                 <h5>Pasapalabras</h5>
+                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-dpad-fill" viewBox="0 0 16 16">
+                     <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zm1.288 2.34a.25.25 0 0 1 .424 0l.799 1.278A.25.25 0 0 1 8.799 4H7.201a.25.25 0 0 1-.212-.382l.799-1.279Zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12H8.8a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0Zm-4.17-4.65-1.279-.798a.25.25 0 0 1 0-.424l1.279-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.382.212Zm10.043-.798-1.278.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z"/>
+                 </svg>
+                 <h5>Pasapalabra</h5>
              </article></a>
              </section>
 
-                     <section class="aside">
-                <a class="aside__title" href="./pages/quiz.html"> 
+                 <section class="aside">
+                <a class="aside__title" href="quiz.html"> 
                  <article class="aside__title">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-diamond" viewBox="0 0 16 16">
   <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
@@ -95,14 +177,33 @@
     </nav> 
 
     <main class="main__content">
-    <div class="gif-soprole">
-    <img src="https://media4.giphy.com/media/YmhMGTwUUq065igoH8/giphy.gif" width="500px">
+   <h1>Juego de Preguntas</h1>
+  <div id="quiz-container">
+    <div id="question-container">
+      <h2 id="question"></h2>
+      
     </div>
+    <div class="temporizador">
+      <div id="timer">Tiempo restante: <span id="time-left"></span> segundos</div>
+    </div>
+    <div id="options-container">
+      <button class="option"></button>
+      <button class="option"></button>
+      <button class="option"></button>
+      <button class="option"></button>
+    </div>
+    <button id="submit-btn">Siguiente Pregunta</button>
+  </div>
+
     </main>
+
+
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
 crossorigin="anonymous"></script>
+<script src="../quiz.js"></script>
+
 </body>
 </html>
