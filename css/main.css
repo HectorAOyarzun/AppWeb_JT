@@ -93,6 +93,10 @@ html {
   width: 20px;
 }
 
+.title_capacitacion {
+  display: flex;
+}
+
 .aside__reflexion {
   display: flex;
   width: 240px;
@@ -174,9 +178,9 @@ html {
 
 body {
   font-family: "Rajdhani";
-  background: url(../assets/fondo.jpg);
   background-attachment: fixed;
   background-size: cover;
+  background-color: #635e5e;
 }
 
 #pantalla-inicial {
