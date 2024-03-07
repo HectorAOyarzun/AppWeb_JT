@@ -6,11 +6,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
     crossorigin="anonymous">
-       <link rel="stylesheet" href="../css/main.css"> 
+    <link rel="stylesheet" href="../css/main.css"> 
+
     <title>Document</title>
 </head>
+<style>
+ body{background:#222; margin:0; padding:0; font-family:Helvetica;}
+
+span{color:#FFF;}
+
+div#content{margin-top:10px;}
+
+div#conf{padding-bottom:10px;}
+
+table{border:2px solid green; box-shadow:1px 1px 8px #00e800,-1px -1px 8px #00e800, 1px -1px 8px #00e800, -1px 1px 8px #00e800; -webkit-box-shadow:1px 1px 8px #00e800,-1px -1px 8px #00e800, 1px -1px 8px #00e800, -1px 1px 8px #00e800; border-collapse:collapse;}
+
+td.pieza{background-image:url(../assets/epp2.jpg); transition:.3s ease-in-out; -moz-transition:.3s ease-in-out; -webkit-transition:.3s ease-in-out; -o-transition:.3s ease-in-out; cursor:pointer;}
+
+div.posic{background:#FFF; padding:5px; border:1px solid #00e800; width:150px; position:absolute; top:70px; overflow:auto; min-height:200px; max-height:450px}
+
+div#titulo{color:#FFF; font-size:30px; font-weight:bold; text-shadow:1px 1px 8px #00e800, -1px -1px 8px #00e800, 1px -1px 8px #00e800, -1px 1px 8px #00e800;}
+</style>
+ 
 <body>
-<div class="container__grid">
+
    <nav class="navbar navbar-dark bg-dark fixed-top" id="header-navbar">
   <div class="container-fluid">
    
@@ -82,25 +101,31 @@
   </div>
     </nav> 
 
-    <main class="main__content">
-<section class="ahorcado">
-    <h2 class="title__game">EL JUEGO DEL AHORCADO</h2>
-    <div class="ahorcado__canvas">
-        <canvas id="pantalla" width="960px" height="450px"> 
-            
-        </canvas>
-    </div>
-     <button class="boton-b" id="boton" type="reset" onclick="javascript:window.location.reload();">Jugar</button>
-    </section>
-    <iframe title="ConatctosCriticos" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=d193cf0c-4df6-43b1-9eb0-c88a22e2f284&autoAuth=true&ctid=c290c4fb-c169-4d9c-9b7f-57547d745b40" frameborder="0" allowFullScreen="true"></iframe>
-    </main>
+   
+     <div id='content' style="text-align: center";>
+    <div id='titulo'>DBZ Puzzle!!</div>
+  	<div id='conf'>
+			<span>Nro de piezas:</span>
+			<select id='piezas'>
+        <option value='4'>4</option>
+				<option value='9'>9</option>
+				<option value='16'>16</option>
+				<option value='25'>25</option>
+				<option value='36'>36</option>
+				<option value='0' disabled>..</option>
+				<option value='0' disabled>..</option>
+				<option value='100'>100</option>
+			</select><input type='button' id='barajar' value='Barajar' />
+      <div><span>Pulsa en un cuadro y luego en otro para intercambiar sus posiciones!!</span></div>
+		</div>
+	</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
 crossorigin="anonymous"></script>
-<script src="../ahorcado.js"></script>
+<script src="../memorama.js"></script>
 
-</div>
+
 
 </body>
 </html>

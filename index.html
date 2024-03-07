@@ -9,6 +9,33 @@
        <link rel="stylesheet" href="./css/main.css"> 
     <title>Index | H.Oyarzun M.</title>
 </head>
+<style>
+  .title_capacitacion{
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+  }
+  .kodfun-galeri {
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+    padding-top: 80px;
+}
+.kodfun-galeri > div {
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25,.4,.45,1.4);
+}
+.kodfun-galeri > div:hover{
+  flex: 5;
+}
+
+</style>
 <body>
 <div class="container__grid">
    <nav class="navbar navbar-dark bg-dark fixed-top" id="header-navbar">
@@ -193,9 +220,28 @@
     </nav> 
 
     <main class="main__content">
-    <div class="gif-soprole">
+   <!-- <div class="gif-soprole">
     <img src="https://media4.giphy.com/media/YmhMGTwUUq065igoH8/giphy.gif" width="500px">
-    </div>
+    </div>-->
+<div class="title_capacitacion">
+
+  <h1>CAPACITACIÓN LOTO</h1>
+</div>
+    <div class="kodfun-galeri">
+
+
+<div style="background-image: url(./assets/Persons1.jpg);">
+<h4>Autocuidado</h4>
+</div>
+
+<div style="background-image: url(./assets/persons2.jpg);"></div>
+
+<div style="background-image: url(./assets/persons3.jpg);"></div>
+
+<div style="background-image: url(./assets/persons4.jpg);"></div>
+<div style="background-image: url(./assets/persons5.jpg);"></div>
+
+</div>
     </main>
 
 </div>
