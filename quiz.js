@@ -1,28 +1,39 @@
 const quizData = [
     {
-      question: "¿Cuántos minutos tiene una hora?",
-      options: ["60'", "30'", "120'", "90'"],
-      answer: 0
-    },
-    {
-      question: "¿Cuál es el río más largo del mundo?",
-      options: ["Amazonas", "Nilo", "Yangtsé", "Misisipi"],
-      answer: 1
-    },
-    {
-      question: "¿Cuántas patas tiene una araña?",
-      options: ["6", "4", "8", "12"],
+      question: "¿Dispositivo que proporciona una forma de cierre que certifica que unn sistema de corte de energía se mantenga en posición segura?",
+      options: ["Alambre'", "Pestillo", "Bloqueo", "Cinta de pegar"],
       answer: 2
     },
     {
-      question: "¿En qué continente se encuentra Chile?",
-      options: ["África", "Oceanía", "Asia", "América"],
+      question: "¿Qué color de cabdado identifica al mecanico?",
+      options: ["Rosado", "Verde ", "Amarillo", "Rojo"],
       answer: 3
     },
     {
-      question: "¿Cuál es la capital de Chile?",
-      options: ["Talca", "Antofagasta", "Santiago", "Valdivia"],
-      answer: 2
+      question: "¿Qué color de candado identifica al operador?",
+      options: ["Amarillo", "Violeta", "Celeste", "Azul"],
+      answer: 0
+    },
+    {
+      question: "¿Dispositivo de advertencia propio y de uso exclusivo del empleado autorizado provisto de un medio de sujeción que permita ajustarlo a un dispositivo de aislamiento de energía?",
+      options: ["Tarjeta de Bloqueo", "Letrero", "Señaletica", "Cartel"],
+      answer: 0
+    },
+    {
+      question: "¿Que tipo de energía es aire comprimido?",
+      options: ["Hidraulica", "Mecánica", "Neumatica", "Termica"],
+      answer: 1
+    },
+    {
+      question: "¿Cuando se ve instalado un bloqueo con tarjeta que se debe hacer ?",
+      options: ["Retirarlo", "No tocarlo", "Limpiarlo", "Tomar una fotografía"],
+      answer: 1
+    },
+
+     {
+      question: "¿Cuando se interviene un equipo para realizar mantencion, limpieza o retiro de atascos que se debe hacer?",
+      options: ["Ingresar", "Aplicar protocolo de bloqueo", "Informar a SSO", "Realizar la tarea"],
+      answer: 1
     }
   ];
   
@@ -46,7 +57,7 @@ const quizData = [
   }
   
   function startTimer() {
-    let timeLeft = 10; // Tiempo en segundos
+    let timeLeft = 60; // Tiempo en segundos
     const timerElement = document.getElementById("time-left");
     timerElement.innerText = timeLeft;
   

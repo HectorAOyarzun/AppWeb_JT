@@ -1,4 +1,4 @@
-var options = ["Desarme atomizador", "EPP", "Equipo", "Evacuación", "Extintores", "A. Trayecto", "Peligro", "Herramientas", "Accidentes", "Incidentes", "Conducción"];
+var options = ["¿Qué es LOTO?", "Fuentes de energía", "Reglas de oro Seg. Máquinas", "Candados de bloqueo", "Candado de bloqueo color negro"];
 
 var startAngle = 0;
 var arc = Math.PI / (options.length / 2);
@@ -132,14 +132,12 @@ function stopRotateWheel() {
 
   // Definir opciones relacionadas para cada opción
   var relatedOptions = {
-    "Desarme atomizador": ["EPP Empleados", "hola", "Espuma"],
-    "EPP": ["Opción A", "Opción B"],
-    "Equipo": ["Equipo 1", "Equipo 2", "Equipo 3"],
-    "Evacuación": ["Lugar 1", "Lugar 2", "Lugar 3"],
-    "Extintores": ["PQS", "Agua", "Espuma"],
-    "A. Trayecto": ["PQS", "Agua", "Espuma"],
-    "Peligro": ["PQS", "Agua", "Espuma"],
-    "Herramientas": ["PQS", "Agua", "Espuma"],
+    "¿Qué es LOTO?": ["Bloqueo y Etiquetado", "-", "-"],
+    "Fuentes de energía": ["Nombra 2 fuentes de energía", "-"],
+    "Reglas de oro Seg. Máquinas": ["Nombra una regla de oro", "-", "-"],
+    "Candados de bloqueo": ["Color azul correponde a ", "Color verde corresponde a ", "Color rojo corresponde a"],
+    "Candado de bloqueo color negro": ["¿Quien los utiliza?", "-", "-"],
+   
    
     // Agregar opciones relacionadas para el resto de las opciones
   };
