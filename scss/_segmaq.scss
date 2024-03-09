@@ -1,0 +1,72 @@
+.menu_segmaq{
+   // padding-top: 80px;
+}
+
+.style_link_segmaq{
+  background-color:#9cffd5;
+  margin:5px;
+  box-shadow: 1px 1px 1px black;
+  &:hover{
+    background-color: blue;
+  color:white;
+  }
+}
+
+
+
+.maquinas_menu{
+    display:flex;
+    justify-content: space-around;
+    padding-top: 65px;
+}
+
+.fab260{
+    background-image: url(../assets/seguridad-maquinas2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &_title{
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+    }
+    &_dinamica{
+          height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+    }
+}
+
+.fab260dinamica{
+    background-image: url(../assets/fondomaq2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &_title{
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+    }
+}
+
+.style_regresar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    color:rgb(0, 0, 88);
+    font-size: 20px;
+    &:hover{
+        background-color: blanchedalmond;
+        padding: 10px;
+        border-radius: 15px;
+    }
+  }
