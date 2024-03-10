@@ -1,5 +1,6 @@
 const cube = document.querySelector('.cube');
 const time = 6;
+const diceAudio = new Audio('./sound/Ruleta.mp3'); // Replace with your audio path
 
 cube.addEventListener('click', () => {
     cube.style.transition = '';
@@ -28,7 +29,12 @@ cube.addEventListener('click', () => {
             case 6:
                 cube.style.transform = `translateY(200px) rotateX(3600deg) rotateY(1980deg) rotateZ(3600deg)`;
                 break;
-        };
+        }
+            
+        diceAudio.play(); // Play the sound even for non-dice faces (optional)
+        
+          
     }, time * 10);
+
 
 });
