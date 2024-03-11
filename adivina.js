@@ -6,53 +6,53 @@ const TIEMPO_DEL_JUEGO = 90;
 const bd_juego = [
   {
       id:'A',
-      pregunta:"Si desciendo del vehículo, y al hacerlo no aplico freno de estacionamiento, no apago el motor del vehiculo, ¿Que riesgo se podría materializar? comienza con Atr...  ",
-      respuesta:"atropello"
+      pregunta:" Qué color de candado identifica al operador | Comienza con A ",
+      respuesta:"amarillo"
   },
   {
     id:'B',
-    pregunta:"Completa la frase; En caso de evacuación debemos seguir las instrucciones del __________ de evacuación. | comienza con c",
-    respuesta:"coordinador"
+    pregunta:"Es la colocación de un dispositivo de corte de energía, con el objeto de asegurar que dicho dispositivo no pueda ser puesto en marcha | Comienza con B",
+    respuesta:"bloqueo"
   },
   {
     id:'C',
-    pregunta:"Complete la frase; Use el extintor sólo si se encuentra _ _ _ _ _ _ _ _ _? y el fuego puede ser controlado. | Comienza con C ?",
-    respuesta:"capacitado"
+    pregunta:"Dispositivo cuya finalidad es resguardar las llaves de los candados y a través de esta asegurar que que se liberen energías por error | Comienza con C y son dos palabras",
+    respuesta:"caja roja"
   },
   {
     id:'D',
-    pregunta:"Completa la frase; En el _ _ _ _ _ _ _ _ _ _? hazte visible usando chaleco reflectante. | Comienza con D",
-    respuesta:"desplazamiento"
+    pregunta:"Remover todos los dispositivos de bloqueo e identificación (Tarjeta de bloqueo de energías y dispositivos de bloqueo) | Comienza con D",
+    respuesta:"desbloquear"
   },
   {
     id:'E',
-    pregunta:"Completa la frase; Cada vez que el vehículo se _ _ _ _ _ _ _ _ _? debe hacerlo en un lugar autorizado, instalando cuñas para evitar desplazamientos",
-    respuesta:"estacione"
+    pregunta:"Es un tipo de energía | Comienza con E",
+    respuesta:"electrica"
   },
   {
     id:'F',
-    pregunta:"Permite desarrollar capacidades y aptitudes para llevar a cabo los trabajos de forma segura y eficiente. | comienza con For",
+    pregunta:"Permite desarrollar capacidades y aptitudes para llevar a cabo los trabajos de forma segura y eficiente. | Comienza con For",
     respuesta:"formacion"
   },
   {
     id:'G',
-    pregunta:"Son empleados para proteger las manos | comienza con G",
-    respuesta:"guantes"
+    pregunta:"Dispositivo implementado en cada área de producción, en su interior esta la caja roja, candados de bloqueo, y dispositivos específicos de bloqueo | Comienza con G",
+    respuesta:"gabinete"
   },
   {
     id:'H',
-    pregunta:"Dentro de la planta tienen preferencia por sobre los peatones, contiene la letra H",
-    respuesta:"vehiculos"
+    pregunta:"Quienes usa el candado de bloqueo color rojos |  Comienza con M",
+    respuesta:"mantenimiento"
   },
   {
     id:'I',
-    pregunta:" Es un suceso o acontecimiento inesperado que puede tener consecuencias negativas | comienza con I",
-    respuesta:"incidentes"
+    pregunta:"Colocación de un dispositivo de etiquetado en un mecanismo de aislamiento de energía | Comienza con I",
+    respuesta:"identificacion"
   },
   {
     id:'J',
-    pregunta:"Dentro de la planta lo vehículos deben circular con las __________ encendidas  | comienza con L",
-    respuesta:"luces"
+    pregunta:"Color de candado utilizado para desbloquear todo tablero eléctrico  | Comienza con N",
+    respuesta:"negro"
   },
  
 ]
