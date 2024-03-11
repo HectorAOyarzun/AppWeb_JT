@@ -1,58 +1,58 @@
 //total preguntas del juego
 const TOTAL_PREGUNTAS = 10;
 //tiempo del juego
-const TIEMPO_DEL_JUEGO = 80;
+const TIEMPO_DEL_JUEGO = 90;
 //estructura para almacenar las preguntas
 const bd_juego = [
   {
       id:'A',
-      pregunta:"Toda lesión que una persona sufra a causa o con ocasión del trabajo - comienza con A",
-      respuesta:"accidente"
+      pregunta:"Si desciendo del vehículo, y al hacerlo no aplico freno de estacionamiento, no apago el motor del vehiculo, ¿Que riesgo se podría materializar? comienza con Atr...  ",
+      respuesta:"atropello"
   },
   {
     id:'B',
-    pregunta:"Parte del cuerpo que se seca, y es un síntoma de deshidratación - comienza con B",
-    respuesta:"boca"
+    pregunta:"Completa la frase; En caso de evacuación debemos seguir las instrucciones del __________ de evacuación. | comienza con c",
+    respuesta:"coordinador"
   },
   {
     id:'C',
-    pregunta:"Son espasmos muscululares dolorosos que suelen darse en las piernas ?",
-    respuesta:"calambres"
+    pregunta:"Complete la frase; Use el extintor sólo si se encuentra _ _ _ _ _ _ _ _ _? y el fuego puede ser controlado. | Comienza con C ?",
+    respuesta:"capacitado"
   },
   {
     id:'D',
-    pregunta:"Suele darse cuando las personas han permanecido de pie durante largos periodos de tiempo en sitios calurosos",
-    respuesta:"desmayo"
+    pregunta:"Completa la frase; En el _ _ _ _ _ _ _ _ _ _? hazte visible usando chaleco reflectante. | Comienza con D",
+    respuesta:"desplazamiento"
   },
   {
     id:'E',
-    pregunta:"Efecto del calor en el organismo",
-    respuesta:"estres"
+    pregunta:"Completa la frase; Cada vez que el vehículo se _ _ _ _ _ _ _ _ _? debe hacerlo en un lugar autorizado, instalando cuñas para evitar desplazamientos",
+    respuesta:"estacione"
   },
   {
     id:'F',
-    pregunta:"Permite desarrollar capacidades y aptitudes para llevar a cabo los trabajos de forma segura y eficiente -comienza con F",
+    pregunta:"Permite desarrollar capacidades y aptitudes para llevar a cabo los trabajos de forma segura y eficiente. | comienza con For",
     respuesta:"formacion"
   },
   {
     id:'G',
-    pregunta:"Son empleados para proteger las manos - comienza con G",
+    pregunta:"Son empleados para proteger las manos | comienza con G",
     respuesta:"guantes"
   },
   {
     id:'H',
-    pregunta:"Frente a una ola de calor debemos - comienza con H",
-    respuesta:"hidratarnos"
+    pregunta:"Dentro de la planta tienen preferencia por sobre los peatones, contiene la letra H",
+    respuesta:"vehiculos"
   },
   {
     id:'I',
-    pregunta:"Son situaciones que no llegan a dañar la propiedad de la empresa o a las personas - comienza con I",
+    pregunta:" Es un suceso o acontecimiento inesperado que puede tener consecuencias negativas | comienza con I",
     respuesta:"incidentes"
   },
   {
     id:'J',
-    pregunta:"Organismo que proporciona informacion sobre alertas de Altas temperaturas - comienza con S",
-    respuesta:"sernapred"
+    pregunta:"Dentro de la planta lo vehículos deben circular con las __________ encendidas  | comienza con L",
+    respuesta:"luces"
   },
  
 ]
