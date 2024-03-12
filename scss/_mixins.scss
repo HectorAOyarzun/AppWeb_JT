@@ -6,6 +6,7 @@
 }
 @mixin html{
     min-height: 100%;
+     scroll-behavior: smooth;
 }
 @mixin body{
     //display: flex;
