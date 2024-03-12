@@ -1,7 +1,7 @@
 //total preguntas del juego
 const TOTAL_PREGUNTAS = 10;
 //tiempo del juego
-const TIEMPO_DEL_JUEGO = 90;
+const TIEMPO_DEL_JUEGO = 120;
 //estructura para almacenar las preguntas
 const bd_juego = [
   {
