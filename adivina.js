@@ -11,18 +11,18 @@ const bd_juego = [
   },
   {
     id:'B',
-    pregunta:"Es la colocación de un dispositivo de corte de energía, con el objeto de asegurar que dicho dispositivo no pueda ser puesto en marcha | Comienza con B",
+    pregunta:"Es reconocido mundialmente como LOCKOUT | Comienza con B",
     respuesta:"bloqueo"
   },
   {
     id:'C',
-    pregunta:"Dispositivo cuya finalidad es resguardar las llaves de los candados y a través de esta asegurar que que se liberen energías por error | Comienza con C y son dos palabras",
-    respuesta:"caja roja"
+    pregunta:"Quienes utilizan candado de bloqueo color negro | Comienza con C y son dos palabras",
+    respuesta:"contratista"
   },
   {
     id:'D',
-    pregunta:"Remover todos los dispositivos de bloqueo e identificación (Tarjeta de bloqueo de energías y dispositivos de bloqueo) | Comienza con D",
-    respuesta:"desbloquear"
+    pregunta:"Que color identifica el candado de transición o traslape | Comienza con V",
+    respuesta:"verde"
   },
   {
     id:'E',
@@ -36,23 +36,23 @@ const bd_juego = [
   },
   {
     id:'G',
-    pregunta:"Dispositivo implementado en cada área de producción, en su interior esta la caja roja, candados de bloqueo, y dispositivos específicos de bloqueo | Comienza con G",
+    pregunta:"En su interior esta la caja roja, candados de bloqueo, y dispositivos específicos de bloqueo | Comienza con Ga",
     respuesta:"gabinete"
   },
   {
     id:'H',
-    pregunta:"Quienes usa el candado de bloqueo color rojos |  Comienza con M",
+    pregunta:"Que área usa el candado de bloqueo color rojo |  Comienza con M",
     respuesta:"mantenimiento"
   },
   {
     id:'I',
-    pregunta:"Colocación de un dispositivo de etiquetado en un mecanismo de aislamiento de energía | Comienza con I",
+    pregunta:"Es reconocido mundialmente como TAGOUT | Comienza con I",
     respuesta:"identificacion"
   },
   {
     id:'J',
-    pregunta:"Color de candado utilizado para desbloquear todo tablero eléctrico  | Comienza con N",
-    respuesta:"negro"
+    pregunta:"Es un tipo de energia  | Comienza con Ne",
+    respuesta:"neumatica"
   },
  
 ]
