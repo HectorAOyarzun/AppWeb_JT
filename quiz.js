@@ -5,7 +5,7 @@ const quizData = [
       answer: 2
     },
     {
-      question: "¿Qué color de cabdado identifica al mecanico?",
+      question: "¿Qué color de candado identifica al mecánico?",
       options: ["Rosado", "Verde ", "Amarillo", "Rojo"],
       answer: 3
     },
